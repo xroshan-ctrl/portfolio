@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosha Verma | BMW M-Mode Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Styling -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #0a0a0a 30%, #000000 90%);
+      color: #e6e6e6;
+      overflow-x: hidden;
+    }
+
+    /* Neon glow text */
+    .neon {
+      color: #00b4ff;
+      text-shadow: 0 0 10px #00b4ff, 0 0 20px #00b4ff, 0 0 40px #0077ff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid #00b4ff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+      color: #00b4ff;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e6e6e6;
+      margin: 0 15px;
+      transition: 0.3s;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #00b4ff;
+      text-shadow: 0 0 8px #00b4ff;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10%;
+      background: linear-gradient(145deg, #0a0a0a, #111);
+    }
+
+    .hero-text {
+      max-width: 50%;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero-text h2 {
+      font-size: 52px;
+      margin-bottom: 20px;
+      color: #00b4ff;
+      font-family: "Orbitron", sans-serif;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #cfcfcf;
+    }
+
+    .hero img {
+      width: 380px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 40px rgba(0, 180, 255, 0.6);
+      animation: float 3s ease-in-out infinite;
+      border: 3px solid #00b4ff;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    section {
+      padding: 60px 10%;
+      margin: 60px 0;
+      background: rgba(10, 10, 10, 0.8);
+      border: 1px solid rgba(0, 180, 255, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 180, 255, 0.2);
+      transition: 0.4s;
+    }
+
+    section:hover {
+      box-shadow: 0 0 30px rgba(0, 180, 255, 0.5);
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #00b4ff;
+      text-transform: uppercase;
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill, .project {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      border: 1px solid rgba(0, 180, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skill:hover, .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 15px rgba(0, 180, 255, 0.6);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #00b4ff;
+      font-size: 14px;
+      font-family: "Orbitron", sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #00b4ff, #0077ff);
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #0077ff, #00b4ff);
+      box-shadow: 0 0 15px #00b4ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    a {
+      color: #00b4ff;
+    }
+
+    a:hover {
+      text-shadow: 0 0 8px #00b4ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1><span class="neon">Rosha Verma</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h2>BMW M Mode Activated</h2>
+      <p>I’m <span class="neon">Rosha Verma</span>, a passionate Electronics Engineering student at <strong>Rajkiya Engineering College, Mirzapur</strong>.  
+      I design and build smart electronic systems with precision and performance — just like the BMW M Series. 🚀</p>
+      <br>
+      <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
+    </div>
+    <img src="https://i.ibb.co/ZYW3VTp/boy.png" alt="Rosha Verma">
+  </div>
+
+  <!-- About Section -->
+  <section id="about">
+    <h3>About Me</h3>
+    <p>I’m a 2nd-year B.Tech student in Electronics Engineering at REC Mirzapur.  
+      My interests lie in <span class="neon">Embedded Systems</span>, <span class="neon">IoT</span>, and <span class="neon">Hardware Design</span>.  
+      My approach to engineering is inspired by precision, efficiency, and the thrill of innovation — the same principles behind BMW’s M Mode.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="skills">
+      <div class="skill">C / C++</div>
+      <div class="skill">Python (Basics)</div>
+      <div class="skill">Arduino Programming</div>
+      <div class="skill">MATLAB</div>
+      <div class="skill">Circuit Design</div>
+      <div class="skill">Proteus / Tinkercad</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="project">
+        <h4 class="neon">Smart Street Light System</h4>
+        <p>Automatic street lighting using LDR and Arduino — energy efficient and intelligent.</p>
+      </div>
+      <div class="project">
+        <h4 class="neon">Temperature & Humidity Monitor</h4>
+        <p>Real-time environment data tracking using DHT11 and microcontroller.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <p>📧 Email: <a href="mailto:rosha.verma@example.com">rosha.verma@example.com</a></p>
+    <p>🔗 LinkedIn: <a href="#">linkedin.com/in/rosha-verma</a></p>
+    <p>💻 GitHub: <a href="#">github.com/rosha-verma</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Rosha Verma | BMW Sport M-Mode Portfolio ⚡
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Fade-in scroll animation
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section').forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          sec.style.opacity = '1';
+          sec.style.transform = 'translateY(0)';
+        } else {
+          sec.style.opacity = '0';
+          sec.style.transform = 'translateY(40px)';
+        }
+        sec.style.transition = '0.6s';
+      });
+    });
+  </script>
+
+</body>
+</html>
